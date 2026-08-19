@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 | LAVION</title>
+<style>
+  body { font-family: -apple-system, "Malgun Gothic", sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; line-height: 1.7; color: #222; }
+  h1 { font-size: 24px; border-bottom: 2px solid #1a3c34; padding-bottom: 12px; }
+  h2 { font-size: 18px; margin-top: 36px; color: #1a3c34; }
+  .updated { color: #888; font-size: 13px; margin-bottom: 32px; }
+  .box { background: #f6f6f4; border-left: 3px solid #1a3c34; padding: 14px 18px; margin: 16px 0; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f6f4; }
+  footer { margin-top: 48px; font-size: 13px; color: #888; }
+  a { color: #1a3c34; }
+</style>
+</head>
+<body>
+
+<h1>개인정보처리방침</h1>
+<p class="updated">최종 업데이트: 2026년 8월 19일 | 적용 대상: LAVION 개인비서 앱 (Windows 데스크톱)</p>
+
+<div class="box">
+요약: 이 앱은 <b>회사 서버를 운영하지 않습니다.</b> 대표님의 업무 데이터(할 일, 일정, 이메일 내용 등)는
+설치하신 컴퓨터에만 저장되며, LAVION은 이 데이터를 수집·조회·저장하지 않습니다.
+AI 기능과 캘린더 연동은 사용자가 직접 등록한 본인 계정(Anthropic·OpenAI·Google 등)을 통해
+사용자의 기기에서 직접 해당 서비스와 통신합니다.
+</div>
+
+<h2>1. 이 앱이 회사 서버를 두지 않는다는 것의 의미</h2>
+<p>
+LAVION 개인비서 앱은 "로컬 퍼스트" 방식으로 만들어졌습니다. 할 일, 프로젝트, 일정, 이메일에서 추출한
+정보 등 사용자가 앱에서 만들거나 가져온 데이터는 사용자의 컴퓨터에 있는 로컬 데이터베이스 파일에만
+저장됩니다. 이 파일은 LAVION의 서버로 전송되지 않으며, LAVION 임직원은 이 데이터에 접근할 수 없습니다.
+</p>
+
+<h2>2. 앱이 다루는 데이터와 저장 위치</h2>
+<table>
+<tr><th>데이터</th><th>저장 위치</th><th>외부 전송 여부</th></tr>
+<tr><td>할 일·프로젝트·일정</td><td>사용자 기기의 로컬 데이터베이스</td><td>없음</td></tr>
+<tr><td>연결한 이메일 계정의 비밀번호</td><td>사용자 기기에 암호화(AES-256)되어 저장</td><td>없음 (해당 메일 서버와의 통신에만 사용)</td></tr>
+<tr><td>이메일 본문 (일정·업무 추출용)</td><td>사용자 기기에 로컬 저장</td><td>사용자가 선택한 AI 제공사(2-1 참고)에만, 추출 처리 목적으로 전송</td></tr>
+<tr><td>Google Calendar 연동 인증 정보</td><td>사용자 기기에 암호화되어 저장</td><td>Google API와의 통신에만 사용</td></tr>
+</table>
+
+<h2>2-1. AI 기능 — 사용자 본인의 계정을 사용합니다</h2>
+<p>
+이메일에서 일정·업무를 추출하거나 답장 초안을 작성하는 등 AI 기능을 쓰려면, 사용자가 직접
+Anthropic(Claude), OpenAI(GPT), Google(Gemini) 중 하나를 선택하고 본인의 API 키를 앱에 등록해야
+합니다. 이 기능을 쓸 때 관련 텍스트(이메일 본문 등)는 사용자의 기기에서 <b>사용자 본인의 계정으로</b>
+해당 AI 제공사에 직접 전송됩니다. LAVION은 이 통신을 중계하거나 그 내용을 열람하지 않습니다. 각 AI
+제공사가 해당 데이터를 어떻게 처리하는지는 각 사의 개인정보처리방침을 따릅니다.
+</p>
+<p>
+API 키를 아직 등록하지 않은 사용자를 위한 <b>샘플 모드</b>에서는 미리 준비된 예시 데이터만 사용하며,
+어떤 AI 서비스와도 통신하지 않습니다.
+</p>
+
+<h2>3. 이메일 접근</h2>
+<p>
+사용자가 이메일 계정(IMAP/POP3, Outlook 등)을 앱에 연결하면, 앱은 사용자의 기기에서 사용자의 인증
+정보로 직접 메일 서버에 접속해 메일을 가져옵니다. 이 과정은 LAVION 서버를 거치지 않습니다. 답장
+초안은 사용자가 명시적으로 요청하고 검토·승인한 뒤에만 저장되며, 앱이 사용자 동의 없이 자동으로
+메일을 발송하지 않습니다.
+</p>
+
+<h2>4. Google Calendar 연동</h2>
+<p>
+Google Calendar 연동은 별도 동의(OAuth) 절차를 거치며, 언제든 앱 내에서 연결을 해제할 수 있습니다.
+연동은 사용자의 기기와 Google API 사이에서 직접 이루어지며, LAVION 서버를 거치지 않습니다.
+</p>
+
+<h2>5. 광고 및 추적</h2>
+<p>
+현재 버전은 광고나 사용자 추적(analytics)을 포함하지 않습니다. 이 부분이 변경될 경우 이 페이지를
+통해 미리 고지합니다.
+</p>
+
+<h2>6. 오류 보고</h2>
+<p>
+안정성 개선을 위해 오류 발생 시 진단 정보를 보내는 기능을 도입할 수 있습니다. 이 기능이 추가되면
+개인 식별 정보를 제외(마스킹)한 정보만 전송되며, 사용자가 끌 수 있는 옵션을 함께 제공합니다.
+</p>
+
+<h2>7. 미성년자</h2>
+<p>이 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 이러한 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+<h2>8. 문의</h2>
+<p>
+개인정보 처리에 관해 문의사항이 있으시면 아래로 연락해 주십시오.<br>
+이메일: <a href="mailto:support@lavionlabs.com">support@lavionlabs.com</a>
+</p>
+
+<h2>9. 변경</h2>
+<p>
+이 방침은 앱 기능 변경에 따라 업데이트될 수 있으며, 중요한 변경 시 이 페이지의 "최종 업데이트" 날짜를
+갱신합니다.
+</p>
+
+<footer>LAVION · lavionlabs.com</footer>
+
+</body>
+</html>
