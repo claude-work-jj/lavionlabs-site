@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LAVION 라비온</title>
-<meta name="description" content="라비온(LAVION)은 일상을 덜 번거롭게 만드는 제품을 만듭니다. 제품: harudo, Windows 데스크톱 개인 비서.">
-<meta name="color-scheme" content="light dark">
+<title>harudo by LAVION | 메일·일정·업무를 한 화면에 모으는 Windows 개인 비서</title>
+<meta name="description" content="harudo는 메일·일정·업무·자료를 한 화면에 모으는 Windows 데스크톱 개인 비서입니다. 내 메일은 내 PC에. 나가는 건 내가 켠 기능으로, 내가 고른 곳으로만. harudo is a Windows desktop personal assistant for mail, calendar, tasks and notes.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://lavionlabs.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 :root{--bg:#ffffff;--ink:#1b2440;--head:#16255A;--mut:#566074;--link:#16255A;--focus:#16255A;--wm:#16255A;--wm-sub:#9A928A;
 --line:#e1e5ee;--lime:#89D129;--lime-soft:#f1f8e6;--lime-edge:#cfe6a6;--navy:#16255A;--on-navy:#ffffff;--on-navy-2:#cdd5ec;--on-navy-3:#aab5d6;--accent-on-navy:#b5e36f;--soft:#f5f7fb;--shadow:22,37,90}
-@media (prefers-color-scheme:dark){:root{--bg:#0b1124;--ink:#dce2ef;--head:#f2f5fb;--mut:#a2abbe;--link:#b5e36f;--focus:#b5e36f;--wm:#eef1f8;--wm-sub:#a8a29b;
---line:#222c48;--lime-soft:#142016;--lime-edge:#2c4a1b;--navy:#16245a;--soft:#11193a;--shadow:0,0,0}}
 
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
@@ -56,22 +55,77 @@ background:repeating-linear-gradient(135deg,var(--soft) 0 14px,var(--bg) 14px 28
 .mut{color:var(--mut)}
 @media (max-width:52rem){.foot-in{flex-direction:column;align-items:flex-start}.foot .home{margin:0 0 .5rem}}
 
-.co-hero{padding:4rem 0 4.5rem}
-.co-hero .lavion{width:min(100%,16rem)}
-.co-hero .one{margin-top:2.25rem;font-size:clamp(1.75rem,1.15rem + 2.2vw,3rem);font-weight:800;letter-spacing:-.025em;line-height:1.25;color:var(--on-navy);max-width:22em}
-.co-hero .one span{display:block;font-size:.45em;letter-spacing:0;color:var(--accent-on-navy);font-weight:700;margin-bottom:.6rem}
-.panel{background:var(--navy);border-radius:2rem;padding:4rem;--wm:#ffffff;color:var(--on-navy-2)}
-.prod-s{margin-top:4.5rem}
-.prod-s h2{font-size:1rem;color:var(--mut);font-weight:700;margin-bottom:1rem}
-.prod{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:center;padding:1.75rem 0;border-top:2px solid var(--head);border-bottom:1px solid var(--line)}
-.prod .icon{width:4.5rem;height:4.5rem}
-.prod b{display:block;font-size:1.5rem;color:var(--head);letter-spacing:-.01em}
-.prod span{color:var(--mut)}
-.prod .go{font-weight:700;white-space:nowrap}
-.en-s{margin-top:3rem;color:var(--mut)}
-.en-s p + p{margin-top:.4rem}
-@media (max-width:52rem){.panel{padding:2.25rem 1.5rem;border-radius:1.5rem}.prod{grid-template-columns:auto 1fr}.prod .go{grid-column:1 / -1}.co-hero{padding:2.5rem 0 3rem}}
-.bleed{background:var(--navy);--wm:#ffffff;color:var(--on-navy-2)}.bleed .top nav a{color:#fff}.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;
+.bleed{background:var(--navy);color:var(--on-navy-2);--wm:#ffffff;--wm-sub:#c9c3bc}
+.bleed .top nav a{color:#ffffff}
+.hero{padding:3.5rem 0 4.5rem;max-width:62rem}
+.hero h1.brand{margin:0 0 3rem}
+.hero h1.brand .lockup{width:17rem;margin-left:-.6rem}
+.hero .tag{color:var(--on-navy);font-size:clamp(1.875rem,1.2rem + 2.2vw,3rem)}
+.hero .tag span{color:var(--accent-on-navy)}
+.hero .intro{margin-top:1.5rem;font-size:1.1875rem;max-width:32em}
+.hero .status{margin-top:2rem;font-size:.9375rem;color:var(--on-navy-3)}
+.hero .status strong{color:var(--on-navy)}
+.straddle{background:linear-gradient(var(--navy) 0 50%,transparent 50%)}
+.straddle .shot{max-width:62rem;margin:0 auto}
+.feats-s{margin-top:6.5rem}
+.feats{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:1.25rem}
+.f{border:1px solid var(--line);border-radius:1.25rem;padding:1.6rem 1.6rem 1.75rem;background:var(--bg)}
+.f0{grid-row:span 2;background:var(--lime-soft);border-color:var(--lime-edge);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.f0 .icon{width:4.5rem;height:4.5rem}
+.f0 h4{font-size:1.75rem;margin-bottom:.75rem}
+.f0 p{font-size:1.0625rem;color:var(--ink)}
+.data-row{margin-top:6.5rem;display:grid;grid-template-columns:1fr 1.35fr;gap:3.5rem;align-items:center}
+.data-row .data-s{margin-top:0}
+.shot img{display:block;width:100%;height:auto;background:var(--soft)}
+.data-s{margin-top:6.5rem;max-width:48rem}
+.data-s h3{font-size:clamp(1.625rem,1.2rem + 1.6vw,2.5rem);font-weight:800;letter-spacing:-.025em;margin-bottom:1rem}
+.data-s p{font-size:1.125rem;color:var(--mut)}
+.band{margin-top:6rem;background:var(--navy);color:var(--on-navy-2);padding:4rem 0}
+.band .in{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+.band h3{color:#ffffff;font-size:clamp(1.5rem,1.2rem + 1vw,2rem);font-weight:800;letter-spacing:-.02em}
+.band h3::before{content:"";display:block;width:3rem;height:4px;background:var(--lime);border-radius:2px;margin-bottom:1.1rem}
+.band p{font-size:1.0625rem}
+.band a{color:var(--accent-on-navy);font-weight:600}
+.band a:focus-visible{outline-color:var(--accent-on-navy)}
+.lang-en{margin-top:8rem}
+.lang-en .hero-t{max-width:46rem}
+.lang-en .tag{color:var(--head);font-size:clamp(1.75rem,1.2rem + 1.8vw,2.625rem)}
+.lang-en .tag span{color:var(--mut);font-weight:700}
+.lang-en .intro{margin-top:1.1rem;font-size:1.0625rem}
+.lang-en .status{margin-top:1.25rem;color:var(--mut)}
+.foot{margin-top:0}
+@media (max-width:60rem){.hero{padding:2rem 0 3rem}.hero h1.brand .lockup{width:13rem}.feats{grid-template-columns:1fr}.f0{grid-row:auto}.band .in{grid-template-columns:1fr;gap:1rem}.feats-s,.data-s{margin-top:4.5rem}.data-row{grid-template-columns:1fr;gap:2rem;margin-top:4.5rem}.data-row .data-s{margin-top:0}.band{margin-top:4.5rem;padding:3rem 0}.lang-en{margin-top:5rem}}
+/* 10-04 대표님 — 흰 배경 · 그림은 첫 화면 오른쪽(누르면 크게) · 내려받기 단추 */
+.bleed{background:var(--bg);color:var(--ink);--wm:#16255A;--wm-sub:#9A928A;border-bottom:1px solid var(--line)}
+.bleed .top nav a{color:var(--head)}
+.hero{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:3rem;align-items:start;padding:3rem 0 4rem}
+.hero .tag{color:var(--head);font-size:clamp(1.625rem,1rem + 1.5vw,2.125rem);text-wrap:balance}
+.hero .tag span{color:#3f7a0c}
+.hero .intro{color:var(--ink)}
+.more{margin-top:1rem;font-size:1.0625rem;color:var(--mut);max-width:34em}
+.hero .status{color:var(--mut)}
+.hero .status strong{color:var(--head)}
+.hero-shot{margin-top:6.75rem}
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:.9rem}
+.zoom:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.zoom .win{transition:transform .15s ease}
+.zoom:hover .win{transform:translateY(-2px)}
+.zoom-hint{margin-top:.6rem;font-size:.8125rem;color:var(--mut);text-align:center}
+.big{padding:0;border:0;background:transparent;max-width:96vw;max-height:94vh;overflow:visible}
+.big::backdrop{background:rgba(11,17,36,.72)}
+.big-in{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-out}
+.big-in img{display:block;width:auto;height:auto;max-width:96vw;max-height:92vh;border-radius:.6rem;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.dl{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.dl-btn{background:var(--lime);color:#16255A;font-weight:700;font-size:1.0625rem;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none}
+.dl-btn:hover{filter:brightness(1.06)}
+.dl-sub{font-size:.9375rem;color:var(--mut)}
+.dl-note{flex-basis:100%;font-size:.875rem;max-width:42em;color:var(--mut)}
+.band{background:var(--soft);color:var(--ink)}
+.band h3{color:var(--head)}
+.band a{color:var(--link)}
+.band a:focus-visible{outline-color:var(--focus)}
+@media (max-width:60rem){.hero{grid-template-columns:1fr;gap:2rem}.hero-shot{margin-top:0}}
+.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;
 background:#16255A;color:#ffffff;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(22,37,90,.28);
 opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
@@ -81,7 +135,7 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 @media (prefers-reduced-motion:reduce){.to-top{transition:none}}
 </style>
 </head>
-<body><div class="bleed"><header class="wrap top"><span></span><nav aria-label="바로가기"><a href="/harudo/">harudo</a><a href="/privacy/">개인정보처리방침</a><a href="mailto:support@lavionlabs.com">문의</a></nav></header><div class="wrap co-hero"><h1><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<body><a class="skip" href="#ko">본문으로 건너뛰기</a><div class="bleed"><header class="wrap top"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
 <g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
 <path d="M 8 -76 L 8 0 L 52 0"/>
 <g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
@@ -89,11 +143,41 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
 <g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
 <g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
-</g></svg></h1><p class="one"><span>라비온</span>일상을 덜 번거롭게 만드는 제품을 만듭니다.</p></div></div><main class="wrap"><div class="prod-s"><h2>제품</h2><div class="prod"><svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><rect x="48" y="48" width="928" height="928" rx="208" fill="#89D129"/>
+</g></svg></a><nav aria-label="바로가기"><a href="#en" lang="en">English</a><a href="/privacy/">개인정보처리방침</a><a href="mailto:support@lavionlabs.com">문의</a></nav></header></div><main><section id="ko" lang="ko" class="" aria-labelledby="ko-h"><div class="bleed"><div class="wrap"><div class="hero"><div class="hero-t"><h1 class="brand"><svg class="lockup" viewBox="0 0 2179 716" role="img" aria-label="harudo by LAVION">
+<g transform="translate(70 70)"><g transform="scale(0.525391)"><rect x="48" y="48" width="928" height="928" rx="208" fill="#89D129"/>
 <g fill="none" stroke="#16255A" stroke-width="100" stroke-linecap="round" stroke-linejoin="round"><path d="M 242 163 L 242 861"/><path d="M 242 648 A 270 190 0 0 1 782 648 L 782 861"/></g>
 <path d="M 362 241 L 430 309 L 590 149" fill="none" stroke="#ffffff" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="327" y="598" width="370" height="240" rx="28" fill="#ffffff"/>
-<path d="M 355 626 L 512 700 L 669 626" fill="none" stroke="#16255A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>harudo</b><span>메일·일정·업무·자료를 한 화면에 모으는 Windows 데스크톱 개인 비서 (지인 대상 시험 중)</span></p><a class="go" href="/harudo/">harudo 알아보기 →</a></div></div><div class="en-s" lang="en"><p><strong>LAVION</strong>. We make products that take the hassle out of everyday life.</p><p><strong>Products</strong>: <a href="/harudo/">harudo</a>, a Windows desktop personal assistant that brings mail, calendar, tasks and notes into one place (in private testing).</p></div></main><footer class="foot"><div class="wrap foot-in"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<path d="M 355 626 L 512 700 L 669 626" fill="none" stroke="#16255A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(658 173.0)">
+<g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="46">
+<g><path d="M 23 -150 L 23 200"/><path d="M 23 80 A 80 80 0 0 1 183 80 L 183 200"/></g>
+<g transform="translate(246 0)"><circle cx="104" cy="100" r="81"/><path d="M 185 0 L 185 200"/></g>
+<g transform="translate(494 0)"><path d="M 23 0 L 23 200"/><path d="M 23 80 A 80 80 0 0 1 159.6 23.4"/></g>
+<g transform="translate(683 0)"><path d="M 23 30 L 23 120 A 80 80 0 0 0 183 120 L 183 30"/><circle cx="48" cy="-38" r="27" fill="#89D129" stroke="none"/><circle cx="158" cy="-38" r="27" fill="#89D129" stroke="none"/></g>
+<g transform="translate(929 0)"><circle cx="104" cy="100" r="81"/><path d="M 185 -150 L 185 200"/></g>
+<g transform="translate(1173 0)"><circle cx="104" cy="100" r="81"/></g>
+</g>
+<g fill="none" stroke="var(--wm-sub)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" transform="translate(0 365)">
+<g stroke-width="10"><path d="M 151.9 -38 L 314.5 -38"/><path d="M 1066.5 -38 L 1229.1 -38"/></g>
+<g transform="translate(360.5 0)">
+<g><path d="M 8 -76 L 8 0"/><circle cx="27" cy="-27" r="19"/></g>
+<g transform="translate(76 0)"><path d="M 8 -54 L 30 0"/><path d="M 52 -54 L 18 30"/></g>
+<g transform="translate(178 0)"><path d="M 8 -76 L 8 0 L 52 0"/></g>
+<g transform="translate(260 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
+<g transform="translate(358 0)"><path d="M 8 -76 L 38 0 L 68 -76"/></g>
+<g transform="translate(456 0)"><path d="M 8 -76 L 8 0"/></g>
+<g transform="translate(494 0)"><circle cx="38" cy="-38" r="30"/></g>
+<g transform="translate(592 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
+</g></g></g></g></svg><span class="sr">harudo</span></h1><h2 class="tag" id="ko-h">메일·일정·업무·자료를 한 화면에서<br><span>내 컴퓨터에서만 돌아가는 개인 비서</span></h2><p class="intro">harudo는 Windows용 데스크톱 앱입니다. 흩어진 메일과 일정, 해야 할 일을 한곳에 모아, 오늘 무엇을 해야 하는지 바로 보이게 합니다.</p><p class="more">harudo는 AI의 도움을 받는 개인 비서 앱으로, 지금 만들고 있습니다. 여러 일을 함께 하시는 N잡러, 회사 메일과 개인 메일을 따로 쓰시는 분께 특히 도움이 되도록 다듬고 있습니다.</p><p class="status"><strong>지금은</strong> 지인 대상 시험판입니다.</p><!-- [출시 상태에 맞춰 이 줄을 고친다] --><div class="dl"><a class="dl-btn" href="https://github.com/claude-work-jj/harudo-releases/releases/latest/download/harudo-Setup.exe">Windows용 내려받기</a><p class="dl-sub">무료 시험판 · Windows 10·11 · 약 110MB</p><p class="dl-note">Edge가 «일반적으로 다운로드되지 않음»이라고 하면 그 줄의 ··· 를 눌러 «유지»를 고르세요. 설치 중 누구에게 설치할지 물으면 처음 골라진 그대로 «다음»을 누르면 됩니다.</p></div></div><div class="hero-shot"><button type="button" class="zoom" data-zoom="shot-big" aria-label="모닝 브리프 화면 크게 보기"><figure class="shot"><div class="win"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/harudo/screen-home.png" width="1600" height="1000" alt="harudo 모닝 브리프 화면. 지연된 업무, 밀린 업무, 오늘 마감과 예정 업무가 한 화면에 모여 있다(견본 데이터)."></div></figure></button><p class="zoom-hint">그림을 누르면 크게 볼 수 있어요</p></div></div></div></div><dialog class="big" id="shot-big" aria-label="모닝 브리프 화면 크게 보기"><button type="button" class="big-in" data-zoom-close aria-label="닫기"><img src="/harudo/screen-home.png" width="1600" height="1000" alt="harudo 모닝 브리프 화면. 지연된 업무, 밀린 업무, 오늘 마감과 예정 업무가 한 화면에 모여 있다(견본 데이터)."></button></dialog><div class="wrap"><div class="feats-s"><h3 class="sh">이런 일을 합니다</h3><ul class="feats"><li class="f f0"><svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><rect x="48" y="48" width="928" height="928" rx="208" fill="#89D129"/>
+<g fill="none" stroke="#16255A" stroke-width="100" stroke-linecap="round" stroke-linejoin="round"><path d="M 242 163 L 242 861"/><path d="M 242 648 A 270 190 0 0 1 782 648 L 782 861"/></g>
+<path d="M 362 241 L 430 309 L 590 149" fill="none" stroke="#ffffff" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="327" y="598" width="370" height="240" rx="28" fill="#ffffff"/>
+<path d="M 355 626 L 512 700 L 669 626" fill="none" stroke="#16255A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h4>메일</h4><p>쓰시는 메일 계정(IMAP/POP3)을 연결해 받은편지함을 한곳에서 봅니다. 메일에서 업무와 일정을 찾아 담을지 물어봅니다.</p></div></li><li class="f f1"><h4>일정</h4><p>업무에 날짜를 넣으면 달력에 놓입니다. 원하시면 <strong>Google Calendar와 연결</strong>해 구글 일정을 함께 보고, harudo에서 만든 일정을 구글에도 올립니다.</p></li><li class="f f2"><h4>업무·프로젝트</h4><p>큰 일을 작은 업무로 나누고, 마감과 약속을 챙깁니다.</p></li><li class="f f3"><h4>자료실</h4><p>회의록·결정·웹 페이지를 모아 두고 다시 찾습니다.</p></li><li class="f f4"><h4>AI 도움</h4><p>직접 등록하신 Google(Gemini) AI 계정으로 요약·초안·정리를 돕습니다. AI를 쓰지 않아도 앱은 그대로 쓸 수 있습니다.</p></li></ul></div><div class="data-row"><div class="data-s"><h3>내 데이터는 내 컴퓨터에</h3><p>메일은 내 PC에 저장되고, LAVION 서버는 없습니다. 밖으로 나가는 건 내가 켠 기능이 내가 고른 곳(내 메일 서버, AI 회사, Google Calendar, 이어 쓰기 폴더, 내가 보낸 보고·문의를 받는 LAVION)으로 보내는 것뿐입니다.</p></div><div class="zoom-wrap"><button type="button" class="zoom" data-zoom="shot-big-1" aria-label="메일 화면 크게 보기"><figure class="shot"><div class="win"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/harudo/screen-mail.png" width="1600" height="1000" alt="harudo 메일 화면. 받은메일함 목록과 열어 본 메일 본문, AI가 찾은 일정 제안 표시가 보인다(견본 데이터)."></div></figure></button><p class="zoom-hint">그림을 누르면 크게 볼 수 있어요</p></div><dialog class="big" id="shot-big-1" aria-label="메일 화면 크게 보기"><button type="button" class="big-in" data-zoom-close aria-label="닫기"><img src="/harudo/screen-mail.png" width="1600" height="1000" alt="harudo 메일 화면. 받은메일함 목록과 열어 본 메일 본문, AI가 찾은 일정 제안 표시가 보인다(견본 데이터)."></button></dialog></div></div><div class="band"><div class="wrap in"><h3>Google Calendar 연결</h3><p>연결은 선택입니다. 연결하시면 기본 캘린더의 일정을 읽어 harudo 달력에 보여 주고, harudo에서 만든 업무를 구글 일정으로 만들고 고칩니다. 가져온 일정은 이 PC에 저장됩니다(이어 쓰기를 켜면 암호화된 사본에도). harudo가 Google API로부터 받은 정보를 사용하고 다른 앱으로 전송하는 방식은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의 제한적 사용(Limited Use) 요건을 따릅니다. 자세한 내용은 <a href="/privacy/#google">개인정보처리방침 4-1절</a>에 있습니다.</p></div></div></section><section id="en" lang="en" class="lang-en" aria-labelledby="en-h"><div class="wrap"><div class="hero-t"><h2 class="tag" id="en-h">Mail, calendar, tasks and notes in one place<br><span>a personal assistant that runs only on your computer</span></h2><p class="intro">harudo is a desktop app for Windows. It brings your scattered mail, events and to-dos together so you can see at a glance what needs doing today.</p><p class="more">harudo is an AI-assisted personal assistant app, still in development. It is being shaped especially for people juggling more than one job, and for anyone who keeps work and personal email in separate accounts.</p><p class="status"><strong>Currently</strong> a private test version for friends and family.</p><!-- [update to match release status] --><div class="dl"><a class="dl-btn" href="https://github.com/claude-work-jj/harudo-releases/releases/latest/download/harudo-Setup.exe">Download for Windows</a><p class="dl-sub">Free test version · Windows 10 and 11 · about 110 MB</p><p class="dl-note">If Edge says the file isn't commonly downloaded, click ··· on that line and choose Keep. If the installer asks who to install for, keep the preselected option and click Next.</p></div></div></div><div class="wrap"><div class="feats-s"><h3 class="sh">What it does</h3><ul class="feats"><li class="f f0"><svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><rect x="48" y="48" width="928" height="928" rx="208" fill="#89D129"/>
+<g fill="none" stroke="#16255A" stroke-width="100" stroke-linecap="round" stroke-linejoin="round"><path d="M 242 163 L 242 861"/><path d="M 242 648 A 270 190 0 0 1 782 648 L 782 861"/></g>
+<path d="M 362 241 L 430 309 L 590 149" fill="none" stroke="#ffffff" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="327" y="598" width="370" height="240" rx="28" fill="#ffffff"/>
+<path d="M 355 626 L 512 700 L 669 626" fill="none" stroke="#16255A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h4>Mail</h4><p>Connect your existing mail accounts (IMAP/POP3) and read them in one inbox. harudo suggests tasks and events it finds in your mail, and asks before adding them.</p></div></li><li class="f f1"><h4>Calendar</h4><p>Tasks with a date appear on your calendar. If you choose, <strong>connect Google Calendar</strong> to see your Google events alongside them and to put events you create in harudo onto Google Calendar.</p></li><li class="f f2"><h4>Tasks and projects</h4><p>Break big jobs into small tasks and keep track of deadlines and commitments.</p></li><li class="f f3"><h4>Library</h4><p>Keep meeting notes, decisions and web pages, and find them again.</p></li><li class="f f4"><h4>AI help</h4><p>Uses the Google (Gemini) AI account you register yourself to summarize, draft and organize. The app works without AI too.</p></li></ul></div><div class="data-row"><div class="data-s"><h3>Your data is kept on your computer</h3><p>Your email is stored on your PC, and there is no LAVION server. The only things that leave are what features you turned on send to places you chose (your mail server, an AI company, Google Calendar, your sync folder, and LAVION for reports and questions you send).</p></div><div class="zoom-wrap"><button type="button" class="zoom" data-zoom="shot-big-2" aria-label="Enlarge the mail screen"><figure class="shot"><div class="win"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="/harudo/screen-mail.png" width="1600" height="1000" alt="harudo mail screen showing the inbox list, an open message and an AI suggestion badge (sample data)."></div></figure></button><p class="zoom-hint">Click the picture to enlarge it</p></div><dialog class="big" id="shot-big-2" aria-label="Enlarge the mail screen"><button type="button" class="big-in" data-zoom-close aria-label="닫기"><img src="/harudo/screen-mail.png" width="1600" height="1000" alt="harudo mail screen showing the inbox list, an open message and an AI suggestion badge (sample data)."></button></dialog></div></div><div class="band"><div class="wrap in"><h3>Google Calendar connection</h3><p>Connecting is optional. Once connected, harudo reads events in your primary calendar to show them in its calendar, and creates and updates Google Calendar events for tasks you make in harudo. Imported events are stored on your PC (and, if you turn on sync, in its encrypted copy). harudo's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. See <a href="/privacy/#google">Privacy Policy, Section 4-1</a>.</p></div></div></section></main><footer class="foot"><div class="wrap foot-in"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
 <g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
 <path d="M 8 -76 L 8 0 L 52 0"/>
 <g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
@@ -101,4 +185,4 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
 <g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
 <g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
-</g></svg></a><p><a href="/privacy/">개인정보처리방침</a> <span lang="en">(<a href="/privacy/">Privacy Policy</a>)</span></p><p>문의 <a href="mailto:support@lavionlabs.com">support@lavionlabs.com</a> <span lang="en">(Contact)</span></p><p class="mut">© 라비온(Lavion) · lavionlabs.com</p></div></footer><button type="button" class="to-top" id="to-top" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button><script>(function(){var b=document.getElementById("to-top");if(!b)return;var f=function(){b.classList.toggle("show",window.scrollY>400)};window.addEventListener("scroll",f,{passive:true});f();b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})})})();</script></body></html>
+</g></svg></a><p><a href="/privacy/">개인정보처리방침</a> <span lang="en">(<a href="/privacy/">Privacy Policy</a>)</span></p><p>문의 <a href="mailto:support@lavionlabs.com">support@lavionlabs.com</a> <span lang="en">(Contact)</span></p><p class="mut">© 라비온(Lavion) · lavionlabs.com</p></div></footer><script>(function(){if(!window.HTMLDialogElement)return;document.addEventListener("click",function(e){var t=e.target;if(!t.closest)return;var z=t.closest("[data-zoom]");if(z){var d=document.getElementById(z.getAttribute("data-zoom"));if(d&&d.showModal)d.showModal();return}var o=t.closest("dialog.big");if(o&&o.open&&(t===o||t.closest("[data-zoom-close]")))o.close()});})();</script><button type="button" class="to-top" id="to-top" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button><script>(function(){var b=document.getElementById("to-top");if(!b)return;var f=function(){b.classList.toggle("show",window.scrollY>400)};window.addEventListener("scroll",f,{passive:true});f();b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})})})();</script></body></html>
