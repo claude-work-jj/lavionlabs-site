@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의 | harudo by LAVION</title>
+<meta name="description" content="harudo·LAVION에 궁금한 점이나 오류를 남겨 주세요. 남기신 글은 담당자 메일로 전달됩니다.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://lavionlabs.com/contact/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#ffffff;--ink:#1b2440;--head:#16255A;--mut:#566074;--link:#16255A;--focus:#16255A;--wm:#16255A;--wm-sub:#9A928A;
+--line:#e1e5ee;--lime:#89D129;--lime-soft:#f1f8e6;--lime-edge:#cfe6a6;--navy:#16255A;--on-navy:#ffffff;--on-navy-2:#cdd5ec;--on-navy-3:#aab5d6;--accent-on-navy:#b5e36f;--soft:#f5f7fb;--shadow:22,37,90}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1rem;line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--link);text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:.2em}
+h1,h2,h3{line-height:1.3;margin:0;color:var(--head)}
+p{margin:0}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:1rem;top:1rem;background:var(--bg);padding:.5rem .8rem;z-index:2}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lockup{display:block;height:auto}
+.lavion{display:block;height:auto}
+.icon{display:block;flex:none}
+
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.5rem}
+.top{display:flex;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;flex-wrap:wrap;padding:1.25rem 0}
+.top .lavion{width:6.25rem}
+.top nav{display:flex;gap:.25rem 1.5rem;flex-wrap:wrap;font-size:.9375rem;font-weight:500}
+.top nav a{text-decoration:none;color:var(--head);padding:.25rem 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:currentColor}
+.tag{font-weight:800;letter-spacing:-.025em;line-height:1.22}
+.tag span{display:block}
+.sh{font-size:clamp(1.5rem,1.15rem + 1.1vw,2.125rem);font-weight:800;letter-spacing:-.02em;margin:0 0 2.25rem}
+.feats{list-style:none;margin:0;padding:0}
+.f h4{margin:0 0 .45rem;font-size:1.125rem;color:var(--head);letter-spacing:-.01em}
+.f p{color:var(--mut)}
+.f p strong{color:var(--ink)}
+.dg h3{font-size:1.375rem;letter-spacing:-.015em;margin-bottom:.75rem}
+.google p a{font-weight:600}
+.shot{margin:0}
+.win{border-radius:.9rem;overflow:hidden;background:var(--bg);box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 24px 60px -18px rgba(var(--shadow),.45),0 2px 6px rgba(var(--shadow),.12);border:1px solid rgba(var(--shadow),.12)}
+.win .bar{display:flex;gap:.4rem;padding:.6rem .8rem;background:var(--soft);border-bottom:1px solid var(--line)}
+.win .bar i{width:.6rem;height:.6rem;border-radius:50%;background:var(--line)}
+.slot{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;color:var(--mut);font-size:.875rem;line-height:1.6;
+background:repeating-linear-gradient(135deg,var(--soft) 0 14px,var(--bg) 14px 28px)}
+.foot{margin-top:7rem;border-top:1px solid var(--line);padding:2.5rem 0 3rem;font-size:.9375rem}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 2rem}
+.foot .lavion{width:5rem}
+.foot .home{margin-right:auto}
+.mut{color:var(--mut)}
+@media (max-width:52rem){.foot-in{flex-direction:column;align-items:flex-start}.foot .home{margin:0 0 .5rem}}
+
+.bleed{background:var(--navy);color:var(--on-navy-2);--wm:#ffffff;--wm-sub:#c9c3bc}
+.bleed .top nav a{color:#ffffff}
+.hero{padding:3.5rem 0 4.5rem;max-width:62rem}
+.hero h1.brand{margin:0 0 3rem}
+.hero h1.brand .lockup{width:17rem;margin-left:-.6rem}
+.hero .tag{color:var(--on-navy);font-size:clamp(1.875rem,1.2rem + 2.2vw,3rem)}
+.hero .tag span{color:var(--accent-on-navy)}
+.hero .intro{margin-top:1.5rem;font-size:1.1875rem;max-width:32em}
+.hero .status{margin-top:2rem;font-size:.9375rem;color:var(--on-navy-3)}
+.hero .status strong{color:var(--on-navy)}
+.straddle{background:linear-gradient(var(--navy) 0 50%,transparent 50%)}
+.straddle .shot{max-width:62rem;margin:0 auto}
+.feats-s{margin-top:6.5rem}
+.feats{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:1.25rem}
+.f{border:1px solid var(--line);border-radius:1.25rem;padding:1.6rem 1.6rem 1.75rem;background:var(--bg)}
+.f0{grid-row:span 2;background:var(--lime-soft);border-color:var(--lime-edge);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.f0 .icon{width:4.5rem;height:4.5rem}
+.f0 h4{font-size:1.75rem;margin-bottom:.75rem}
+.f0 p{font-size:1.0625rem;color:var(--ink)}
+.data-row{margin-top:6.5rem;display:grid;grid-template-columns:1fr 1.35fr;gap:3.5rem;align-items:center}
+.data-row .data-s{margin-top:0}
+.shot img{display:block;width:100%;height:auto;background:var(--soft)}
+.data-s{margin-top:6.5rem;max-width:48rem}
+.data-s h3{font-size:clamp(1.625rem,1.2rem + 1.6vw,2.5rem);font-weight:800;letter-spacing:-.025em;margin-bottom:1rem}
+.data-s p{font-size:1.125rem;color:var(--mut)}
+.band{margin-top:6rem;background:var(--navy);color:var(--on-navy-2);padding:4rem 0}
+.band .in{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+.band h3{color:#ffffff;font-size:clamp(1.5rem,1.2rem + 1vw,2rem);font-weight:800;letter-spacing:-.02em}
+.band h3::before{content:"";display:block;width:3rem;height:4px;background:var(--lime);border-radius:2px;margin-bottom:1.1rem}
+.band p{font-size:1.0625rem}
+.band a{color:var(--accent-on-navy);font-weight:600}
+.band a:focus-visible{outline-color:var(--accent-on-navy)}
+.lang-en{margin-top:8rem}
+.lang-en .hero-t{max-width:46rem}
+.lang-en .tag{color:var(--head);font-size:clamp(1.75rem,1.2rem + 1.8vw,2.625rem)}
+.lang-en .tag span{color:var(--mut);font-weight:700}
+.lang-en .intro{margin-top:1.1rem;font-size:1.0625rem}
+.lang-en .status{margin-top:1.25rem;color:var(--mut)}
+.foot{margin-top:0}
+@media (max-width:60rem){.hero{padding:2rem 0 3rem}.hero h1.brand .lockup{width:13rem}.feats{grid-template-columns:1fr}.f0{grid-row:auto}.band .in{grid-template-columns:1fr;gap:1rem}.feats-s,.data-s{margin-top:4.5rem}.data-row{grid-template-columns:1fr;gap:2rem;margin-top:4.5rem}.data-row .data-s{margin-top:0}.band{margin-top:4.5rem;padding:3rem 0}.lang-en{margin-top:5rem}}
+/* 10-04 대표님 — 흰 배경 · 그림은 첫 화면 오른쪽(누르면 크게) · 내려받기 단추 */
+.bleed{background:var(--bg);color:var(--ink);--wm:#16255A;--wm-sub:#9A928A;border-bottom:1px solid var(--line)}
+.bleed .top nav a{color:var(--head)}
+.hero{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:3rem;align-items:start;padding:3rem 0 4rem}
+.hero .tag{color:var(--head);font-size:clamp(1.625rem,1rem + 1.5vw,2.125rem);text-wrap:balance}
+.hero .tag span{color:#3f7a0c}
+.hero .intro{color:var(--ink)}
+.more{margin-top:1rem;font-size:1.0625rem;color:var(--mut);max-width:34em}
+.hero .status{color:var(--mut)}
+.hero .status strong{color:var(--head)}
+.hero-shot{margin-top:6.75rem}
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:.9rem}
+.zoom:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.zoom .win{transition:transform .15s ease}
+.zoom:hover .win{transform:translateY(-2px)}
+.zoom-hint{margin-top:.6rem;font-size:.8125rem;color:var(--mut);text-align:center}
+.big{padding:0;border:0;background:transparent;max-width:96vw;max-height:94vh;overflow:visible}
+.big::backdrop{background:rgba(11,17,36,.72)}
+.big-in{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-out}
+.big-in img{display:block;width:auto;height:auto;max-width:96vw;max-height:92vh;border-radius:.6rem;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.dl{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.dl-btn{background:var(--lime);color:#16255A;font-weight:700;font-size:1.0625rem;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none}
+.dl-btn:hover{filter:brightness(1.06)}
+.dl-sub{font-size:.9375rem;color:var(--mut)}
+.dl-note{flex-basis:100%;font-size:.875rem;max-width:42em;color:var(--mut)}
+.band{background:var(--soft);color:var(--ink)}
+.band h3{color:var(--head)}
+.band a{color:var(--link)}
+.band a:focus-visible{outline-color:var(--focus)}
+@media (max-width:60rem){.hero{grid-template-columns:1fr;gap:2rem}.hero-shot{margin-top:0}}
+.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;
+background:#16255A;color:#ffffff;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(22,37,90,.28);
+opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:#22357a}
+.to-top:focus-visible{outline:3px solid #89D129;outline-offset:3px}
+.to-top svg{width:1.25rem;height:1.25rem}
+@media (prefers-reduced-motion:reduce){.to-top{transition:none}}
+
+.c-main{max-width:44rem;padding-top:3rem;padding-bottom:5rem}
+.c-main h1{font-size:clamp(1.75rem,1.2rem + 1.6vw,2.375rem);font-weight:800;letter-spacing:-.02em}
+.c-lead{margin-top:.9rem;color:var(--mut);font-size:1.0625rem}
+.c-form{margin-top:2.25rem;display:grid;gap:1.25rem}
+.c-f label{display:block;font-weight:700;color:var(--head);margin-bottom:.4rem}
+.c-f .opt{font-weight:500;color:var(--mut);font-size:.875rem}
+.c-f input,.c-f select,.c-f textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid #c9cfdc;border-radius:.6rem;padding:.7rem .85rem}
+.c-f textarea{min-height:11rem;resize:vertical}
+.c-f input:focus-visible,.c-f select:focus-visible,.c-f textarea:focus-visible{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--focus)}
+.c-agree{display:flex;gap:.6rem;align-items:flex-start;background:var(--soft);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.1rem;font-size:.9375rem}
+.c-agree input{margin-top:.35rem;width:1.1rem;height:1.1rem;flex:none}
+.c-agree a{font-weight:600}
+.c-bot{position:absolute;left:-9999px}
+.c-send{justify-self:start;background:var(--lime);color:#16255A;font:inherit;font-weight:700;font-size:1.0625rem;padding:.8rem 1.8rem;border:0;border-radius:999px;cursor:pointer}
+.c-send:hover{filter:brightness(1.06)}
+.c-send:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.c-send[disabled]{opacity:.6;cursor:progress}
+.c-msg{border-radius:.8rem;padding:1rem 1.1rem;font-size:1rem}
+.c-msg.ok{background:#eef7e0;border:1px solid #cfe8a8;color:#24410a}
+.c-msg.err{background:#fdeeee;border:1px solid #f3c2c2;color:#7a1d1d}
+.c-en{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--mut);font-size:.9375rem}
+</style>
+</head>
+<body><a class="skip" href="#main">본문으로 건너뛰기</a><header class="wrap top"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
+<path d="M 8 -76 L 8 0 L 52 0"/>
+<g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
+<g transform="translate(180 0)"><path d="M 8 -76 L 38 0 L 68 -76"/></g>
+<g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
+<g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
+<g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
+</g></svg></a><nav aria-label="바로가기"><a href="/harudo/">harudo</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의</a></nav></header><main class="wrap c-main" id="main">
+<h1>문의 남기기</h1>
+<p class="c-lead">harudo를 쓰다 궁금한 점, 오류, 제안을 남겨 주세요. 남기신 글은 담당자 메일로 바로 전달되고, 적어 주신 메일 주소로 답장을 드립니다.</p>
+<form class="c-form" id="c-form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="1dccd4b2-1f38-4305-ab1c-4396091e0d32">
+<input type="hidden" name="from_name" value="lavionlabs.com 문의">
+<input type="hidden" name="subject" value="[lavionlabs.com 문의]">
+<input type="checkbox" name="botcheck" class="c-bot" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="c-f"><label for="c-kind">무엇에 관한 문의인가요</label>
+<select id="c-kind" name="category"><option>설치·사용 방법</option><option>오류 신고</option><option>기능 제안</option><option>그 밖의 문의</option></select></div>
+<div class="c-f"><label for="c-name">이름 <span class="opt">(선택)</span></label><input id="c-name" name="name" autocomplete="name"></div>
+<div class="c-f"><label for="c-email">답장 받을 메일 주소</label><input id="c-email" name="email" type="email" required autocomplete="email" inputmode="email"></div>
+<div class="c-f"><label for="c-text">내용</label><textarea id="c-text" name="message" required placeholder="어떤 화면에서 무엇을 하셨는지, 어떻게 되었는지 적어 주시면 빨리 도와드릴 수 있어요."></textarea></div>
+<label class="c-agree"><input type="checkbox" required name="consent" value="agreed"><span>답장을 드리기 위해 <strong>메일 주소·이름·문의 내용</strong>을 받습니다. 글은 문의 전달 서비스(Web3Forms)를 거쳐 support@lavionlabs.com으로 보내집니다. 자세한 내용은 <a href="/privacy/">개인정보처리방침</a>에 있습니다. 동의하지 않으셔도 support@lavionlabs.com으로 직접 메일을 보내실 수 있습니다.</span></label>
+<button class="c-send" type="submit" id="c-send">문의 보내기</button>
+<div id="c-result" role="status" aria-live="polite"></div>
+</form>
+<p class="c-en" lang="en">Questions, bug reports or ideas about harudo? Write to us here (in English is fine) and we will reply to the email address you enter. Your message is delivered to support@lavionlabs.com through our form service, Web3Forms.</p>
+</main><footer class="foot"><div class="wrap foot-in"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
+<path d="M 8 -76 L 8 0 L 52 0"/>
+<g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
+<g transform="translate(180 0)"><path d="M 8 -76 L 38 0 L 68 -76"/></g>
+<g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
+<g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
+<g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
+</g></svg></a><p><a href="/privacy/">개인정보처리방침</a> <span lang="en">(<a href="/privacy/">Privacy Policy</a>)</span></p><p><a href="/contact/">문의 남기기</a> <span lang="en">(<a href="/contact/">Contact</a>)</span> · support@lavionlabs.com</p><p class="mut">© 라비온(Lavion) · lavionlabs.com</p></div></footer><script>(function(){var f=document.getElementById("c-form"),b=document.getElementById("c-send"),r=document.getElementById("c-result");if(!f||!window.fetch)return;
+f.addEventListener("submit",function(e){e.preventDefault();if(!f.reportValidity())return;b.disabled=true;b.textContent="보내는 중…";r.innerHTML="";
+fetch(f.action,{method:"POST",headers:{"Accept":"application/json"},body:new FormData(f)}).then(function(x){return x.json().then(function(j){return{ok:x.ok&&j.success,j:j}})})
+.then(function(o){if(o.ok){f.reset();r.innerHTML='<p class="c-msg ok">보냈어요. 적어 주신 메일로 답장을 드릴게요.</p>'}else{throw 0}})
+.catch(function(){r.innerHTML='<p class="c-msg err">보내지 못했어요. 잠시 뒤 다시 눌러 주시거나 support@lavionlabs.com으로 직접 메일을 보내 주세요.</p>'})
+.then(function(){b.disabled=false;b.textContent="문의 보내기"})});})();</script><button type="button" class="to-top" id="to-top" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button><script>(function(){var b=document.getElementById("to-top");if(!b)return;var f=function(){b.classList.toggle("show",window.scrollY>400)};window.addEventListener("scroll",f,{passive:true});f();b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})})})();</script></body></html>
