@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>업데이트 소식 | harudo by LAVION</title>
-<meta name="description" content="harudo가 판마다 무엇이 바뀌었는지, 다음에 무엇을 준비하고 있는지 알려 드립니다. 최신 0.2.40 (2026년 10월 5일).">
+<meta name="description" content="harudo가 판마다 무엇이 바뀌었는지, 다음에 무엇을 준비하고 있는지 알려 드립니다. 최신 0.2.41 (2026년 10월 5일).">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://lavionlabs.com/harudo/updates/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -135,6 +135,8 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 @media (prefers-reduced-motion:reduce){.to-top{transition:none}}
 .dl-news{margin-top:.55rem;font-size:.9375rem}
 .dl-news a{font-weight:600}
+.dl-sub-mail{flex-basis:100%;font-size:.9375rem;max-width:42em;color:var(--ink)}
+.dl-sub-mail a{font-weight:600}
 
 body>header.top{padding-left:1.5rem;padding-right:1.5rem}
 .u-main{max-width:46rem;padding-top:3rem;padding-bottom:5rem}
@@ -187,12 +189,20 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <p class="u-lead">판마다 무엇이 바뀌었는지, 그리고 다음에 무엇을 준비하고 있는지 알려 드립니다.</p>
 <div class="u-next" aria-labelledby="ko-next"><h2 id="ko-next">다음 예정</h2>
 <p class="u-note">날짜는 약속하지 않고 진행 단계만 적습니다.</p><ul>
-<li><span class="stage stage-preparing">준비 중</span><span>처음 시작 안내에 나오는 예시 그림을 누르면 크게 볼 수 있게 합니다.</span></li>
 <li><span class="stage stage-preparing">준비 중</span><span>처음 설정을 마치면 하루도로 할 수 있는 일을 한눈에 보여 드립니다.</span></li>
 <li><span class="stage stage-reviewing">검토 중</span><span>설치할 때 뜨는 Windows 경고 창을 줄이는 방법을 알아보고 있습니다.</span></li>
 </ul></div>
+<article class="u-rel" aria-labelledby="ko-v0-2-41">
+<h2 id="ko-v0-2-41"><span class="u-ver">0.2.41</span>메일로 온 결제가 장부 후보로 먼저 올라와요 — 내 PC 안에서<span class="u-new">최신</span></h2>
+<time class="u-date" datetime="2026-10-05">2026년 10월 5일</time><ul>
+<li>카드·간편결제·쿠팡 와우·센트비처럼 메일로 온 결제가 «거래 확인»에 장부 후보로 먼저 올라옵니다. ✓를 누른 것만 장부에 들어가고, 메일에서 후보를 찾는 일은 이 PC 안에서 해요. 같은 결제를 알리는 메일 두 통은 하나로 묶이고, «지난 메일에서 결제 찾기»로 지난 메일도 거슬러 찾을 수 있어요. 설정 › 자산관리 › «메일 계정별 돈 구분»에서 계정마다 개인·회사를 정할 수 있어요.</li>
+<li>메일에 거래내역 파일이 붙어 오면 «거래내역으로 가져오기»로 바로 불러올 수 있습니다. 암호가 걸린 은행 엑셀도 열리고, «이 비밀번호 기억하기»를 켜 두면 이 PC에 암호화해 저장했다가 다음 파일에 먼저 써 봐요. 금액이 링크나 암호 뒤에 있는 명세서 메일이 오면 홈 할 일에 «명세서가 왔어요» 카드가 생겨요.</li>
+<li>회사 메일 등으로 오는 계정 확인·전자서명 요청을 사칭한 피싱 메일을 스팸메일함으로 가릅니다. 업데이트 뒤 첫 동기화 때는 이미 받아 둔 피싱 메일도 한 번 스팸메일함으로 옮겨요. 지우지는 않으며, 메일 화면 위 띠의 «되돌리기»로 언제든 원래대로 돌려놓을 수 있어요.</li>
+<li>설정 › AI 비서 연결에 «첨부 내용도 읽기»가 생겼습니다(처음엔 꺼져 있어요). 켜면 Claude가 메일에 붙은 PDF·한글·워드·사진 속 글자까지 읽을 수 있어요. 처음 보는 보낸 사람의 첨부는 앞부분만 넘기고, 의심스러운 지시 문장이 있으면 알려 드려요. Claude에게 메일 정리를 부탁하면 다른 메일 연결 대신 하루도를 쓰도록 안내도 다듬었습니다.</li>
+<li>처음 시작 안내와 도움말의 예시 그림을 누르면 크게 볼 수 있어요. 보안 안내와 정식판 소식을 메일로 받을 수 있게 «소식을 메일로 받기 ›» 한 줄도 더했어요(선택 · 계정 아님).</li>
+</ul></article>
 <article class="u-rel" aria-labelledby="ko-v0-2-40">
-<h2 id="ko-v0-2-40"><span class="u-ver">0.2.40</span>업데이트한 뒤에도 Claude 연결이 이어져요<span class="u-new">최신</span></h2>
+<h2 id="ko-v0-2-40"><span class="u-ver">0.2.40</span>업데이트한 뒤에도 Claude 연결이 이어져요</h2>
 <time class="u-date" datetime="2026-10-05">2026년 10월 5일</time><ul>
 <li>하루도를 업데이트하거나 다시 켠 뒤에도, 그리고 설정 › AI 비서 연결을 껐다 다시 켜도 Claude 앱에 설치해 둔 하루도 확장을 그대로 계속 쓸 수 있습니다.</li>
 <li>확장을 꼭 새로 설치해야 할 때만 «Claude 확장을 다시 설치해 주세요» 알림이 뜹니다. 하루도가 새 파일을 미리 만들어 두니, 설정 › AI 비서 연결에서 «폴더 열기»를 누르고 화면 안내대로 예전 하루도 확장을 지운 뒤 새 파일을 Claude에 끌어다 놓아 주세요.</li>
@@ -243,12 +253,20 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <p class="u-lead">What changed in each version of harudo, and what we're working on next.</p>
 <div class="u-next" aria-labelledby="en-next"><h2 id="en-next">Coming up</h2>
 <p class="u-note">We list the stage each item is at, not a date.</p><ul>
-<li><span class="stage stage-preparing">Preparing</span><span>You&#x27;ll be able to click the example pictures in the getting-started guide to see them larger.</span></li>
 <li><span class="stage stage-preparing">Preparing</span><span>When you finish setting up, harudo will show you what it can do at a glance.</span></li>
 <li><span class="stage stage-reviewing">Under review</span><span>We&#x27;re looking into ways to reduce the Windows warning that appears when you install harudo.</span></li>
 </ul></div>
+<article class="u-rel" aria-labelledby="en-v0-2-41">
+<h2 id="en-v0-2-41"><span class="u-ver">0.2.41</span>Payments in your mail now show up as ledger candidates first — right on your PC<span class="u-new">Latest</span></h2>
+<time class="u-date" datetime="2026-10-05">October 5, 2026</time><ul>
+<li>Payments that arrive by email — cards, easy-pay services, Coupang WOW, Sentbe and more — now show up first as ledger candidates in Review transactions. Only the ones you tick (✓) go into your ledger, and finding candidates in your mail happens right on this PC. Two emails about the same payment are grouped into one, and &quot;Find payments in past emails&quot; looks back through older mail too. In Settings › Money tracking › Money type per mail account, you can mark each account as personal or business.</li>
+<li>When a transaction file is attached to an email, you can bring it in straight away with &quot;Import as transactions&quot;. Password-protected bank spreadsheets open too, and with &quot;Remember this password&quot; on, the password is stored encrypted on this PC and tried first on the next file. When a statement email arrives with the amount behind a link or a password, a &quot;Your statement has arrived&quot; card appears in your Home to-dos.</li>
+<li>Phishing emails pretending to be account checks or e-signature requests, such as those sent to work addresses, are now sorted into Spam. On the first sync after this update, phishing emails you already received are also moved to Spam once. Nothing is deleted, and you can put them back any time with Undo on the bar at the top of the mail screen.</li>
+<li>Settings › AI assistant link has a new &quot;Read attachment contents too&quot; option (off to start). When it&#x27;s on, Claude can read the text inside PDFs, Hangul and Word files and photos attached to your mail. Attachments from first-time senders are passed only in part, and harudo tells you if it finds instruction-like sentences. We also refined the guidance so that when you ask Claude to tidy your mail, it uses harudo rather than another mail connection.</li>
+<li>You can now click the example pictures in the getting-started guide and in Help to see them larger. We also added a &quot;Get news by email ›&quot; line so you can get security notices and launch news by email (optional — not an account).</li>
+</ul></article>
 <article class="u-rel" aria-labelledby="en-v0-2-40">
-<h2 id="en-v0-2-40"><span class="u-ver">0.2.40</span>Your Claude connection now stays on after updates<span class="u-new">Latest</span></h2>
+<h2 id="en-v0-2-40"><span class="u-ver">0.2.40</span>Your Claude connection now stays on after updates</h2>
 <time class="u-date" datetime="2026-10-05">October 5, 2026</time><ul>
 <li>After you update or restart harudo, and even after you turn Settings › AI assistant link off and on again, the harudo extension you installed in the Claude app keeps working as it is.</li>
 <li>Only when the extension really has to be reinstalled will you see &quot;Please reinstall the Claude extension&quot;. harudo makes the new file for you: press &quot;Open folder&quot; in Settings › AI assistant link, then follow the on-screen note to remove the old harudo extension and drag the new file into Claude.</li>
