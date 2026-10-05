@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>업데이트 소식 | harudo by LAVION</title>
+<meta name="description" content="harudo가 판마다 무엇이 바뀌었는지, 다음에 무엇을 준비하고 있는지 알려 드립니다. 최신 0.2.39 (2026년 10월 5일).">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://lavionlabs.com/harudo/updates/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#ffffff;--ink:#1b2440;--head:#16255A;--mut:#566074;--link:#16255A;--focus:#16255A;--wm:#16255A;--wm-sub:#9A928A;
+--line:#e1e5ee;--lime:#89D129;--lime-soft:#f1f8e6;--lime-edge:#cfe6a6;--navy:#16255A;--on-navy:#ffffff;--on-navy-2:#cdd5ec;--on-navy-3:#aab5d6;--accent-on-navy:#b5e36f;--soft:#f5f7fb;--shadow:22,37,90}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1rem;line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--link);text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:.2em}
+h1,h2,h3{line-height:1.3;margin:0;color:var(--head)}
+p{margin:0}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:1rem;top:1rem;background:var(--bg);padding:.5rem .8rem;z-index:2}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lockup{display:block;height:auto}
+.lavion{display:block;height:auto}
+.icon{display:block;flex:none}
+
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.5rem}
+.top{display:flex;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;flex-wrap:wrap;padding:1.25rem 0}
+.top .lavion{width:6.25rem}
+.top nav{display:flex;gap:.25rem 1.5rem;flex-wrap:wrap;font-size:.9375rem;font-weight:500}
+.top nav a{text-decoration:none;color:var(--head);padding:.25rem 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:currentColor}
+.tag{font-weight:800;letter-spacing:-.025em;line-height:1.22}
+.tag span{display:block}
+.sh{font-size:clamp(1.5rem,1.15rem + 1.1vw,2.125rem);font-weight:800;letter-spacing:-.02em;margin:0 0 2.25rem}
+.feats{list-style:none;margin:0;padding:0}
+.f h4{margin:0 0 .45rem;font-size:1.125rem;color:var(--head);letter-spacing:-.01em}
+.f p{color:var(--mut)}
+.f p strong{color:var(--ink)}
+.dg h3{font-size:1.375rem;letter-spacing:-.015em;margin-bottom:.75rem}
+.google p a{font-weight:600}
+.shot{margin:0}
+.win{border-radius:.9rem;overflow:hidden;background:var(--bg);box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 24px 60px -18px rgba(var(--shadow),.45),0 2px 6px rgba(var(--shadow),.12);border:1px solid rgba(var(--shadow),.12)}
+.win .bar{display:flex;gap:.4rem;padding:.6rem .8rem;background:var(--soft);border-bottom:1px solid var(--line)}
+.win .bar i{width:.6rem;height:.6rem;border-radius:50%;background:var(--line)}
+.slot{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;color:var(--mut);font-size:.875rem;line-height:1.6;
+background:repeating-linear-gradient(135deg,var(--soft) 0 14px,var(--bg) 14px 28px)}
+.foot{margin-top:7rem;border-top:1px solid var(--line);padding:2.5rem 0 3rem;font-size:.9375rem}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 2rem}
+.foot .lavion{width:5rem}
+.foot .home{margin-right:auto}
+.mut{color:var(--mut)}
+@media (max-width:52rem){.foot-in{flex-direction:column;align-items:flex-start}.foot .home{margin:0 0 .5rem}}
+
+.bleed{background:var(--navy);color:var(--on-navy-2);--wm:#ffffff;--wm-sub:#c9c3bc}
+.bleed .top nav a{color:#ffffff}
+.hero{padding:3.5rem 0 4.5rem;max-width:62rem}
+.hero h1.brand{margin:0 0 3rem}
+.hero h1.brand .lockup{width:17rem;margin-left:-.6rem}
+.hero .tag{color:var(--on-navy);font-size:clamp(1.875rem,1.2rem + 2.2vw,3rem)}
+.hero .tag span{color:var(--accent-on-navy)}
+.hero .intro{margin-top:1.5rem;font-size:1.1875rem;max-width:32em}
+.hero .status{margin-top:2rem;font-size:.9375rem;color:var(--on-navy-3)}
+.hero .status strong{color:var(--on-navy)}
+.straddle{background:linear-gradient(var(--navy) 0 50%,transparent 50%)}
+.straddle .shot{max-width:62rem;margin:0 auto}
+.feats-s{margin-top:6.5rem}
+.feats{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:1.25rem}
+.f{border:1px solid var(--line);border-radius:1.25rem;padding:1.6rem 1.6rem 1.75rem;background:var(--bg)}
+.f0{grid-row:span 2;background:var(--lime-soft);border-color:var(--lime-edge);padding:2.25rem 2rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.f0 .icon{width:4.5rem;height:4.5rem}
+.f0 h4{font-size:1.75rem;margin-bottom:.75rem}
+.f0 p{font-size:1.0625rem;color:var(--ink)}
+.data-row{margin-top:6.5rem;display:grid;grid-template-columns:1fr 1.35fr;gap:3.5rem;align-items:center}
+.data-row .data-s{margin-top:0}
+.shot img{display:block;width:100%;height:auto;background:var(--soft)}
+.data-s{margin-top:6.5rem;max-width:48rem}
+.data-s h3{font-size:clamp(1.625rem,1.2rem + 1.6vw,2.5rem);font-weight:800;letter-spacing:-.025em;margin-bottom:1rem}
+.data-s p{font-size:1.125rem;color:var(--mut)}
+.band{margin-top:6rem;background:var(--navy);color:var(--on-navy-2);padding:4rem 0}
+.band .in{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+.band h3{color:#ffffff;font-size:clamp(1.5rem,1.2rem + 1vw,2rem);font-weight:800;letter-spacing:-.02em}
+.band h3::before{content:"";display:block;width:3rem;height:4px;background:var(--lime);border-radius:2px;margin-bottom:1.1rem}
+.band p{font-size:1.0625rem}
+.band a{color:var(--accent-on-navy);font-weight:600}
+.band a:focus-visible{outline-color:var(--accent-on-navy)}
+.lang-en{margin-top:8rem}
+.lang-en .hero-t{max-width:46rem}
+.lang-en .tag{color:var(--head);font-size:clamp(1.75rem,1.2rem + 1.8vw,2.625rem)}
+.lang-en .tag span{color:var(--mut);font-weight:700}
+.lang-en .intro{margin-top:1.1rem;font-size:1.0625rem}
+.lang-en .status{margin-top:1.25rem;color:var(--mut)}
+.foot{margin-top:0}
+@media (max-width:60rem){.hero{padding:2rem 0 3rem}.hero h1.brand .lockup{width:13rem}.feats{grid-template-columns:1fr}.f0{grid-row:auto}.band .in{grid-template-columns:1fr;gap:1rem}.feats-s,.data-s{margin-top:4.5rem}.data-row{grid-template-columns:1fr;gap:2rem;margin-top:4.5rem}.data-row .data-s{margin-top:0}.band{margin-top:4.5rem;padding:3rem 0}.lang-en{margin-top:5rem}}
+/* 10-04 대표님 — 흰 배경 · 그림은 첫 화면 오른쪽(누르면 크게) · 내려받기 단추 */
+.bleed{background:var(--bg);color:var(--ink);--wm:#16255A;--wm-sub:#9A928A;border-bottom:1px solid var(--line)}
+.bleed .top nav a{color:var(--head)}
+.hero{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:3rem;align-items:start;padding:3rem 0 4rem}
+.hero .tag{color:var(--head);font-size:clamp(1.625rem,1rem + 1.5vw,2.125rem);text-wrap:balance}
+.hero .tag span{color:#3f7a0c}
+.hero .intro{color:var(--ink)}
+.more{margin-top:1rem;font-size:1.0625rem;color:var(--mut);max-width:34em}
+.hero .status{color:var(--mut)}
+.hero .status strong{color:var(--head)}
+.hero-shot{margin-top:6.75rem}
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:.9rem}
+.zoom:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.zoom .win{transition:transform .15s ease}
+.zoom:hover .win{transform:translateY(-2px)}
+.zoom-hint{margin-top:.6rem;font-size:.8125rem;color:var(--mut);text-align:center}
+.big{padding:0;border:0;background:transparent;max-width:96vw;max-height:94vh;overflow:visible}
+.big::backdrop{background:rgba(11,17,36,.72)}
+.big-in{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-out}
+.big-in img{display:block;width:auto;height:auto;max-width:96vw;max-height:92vh;border-radius:.6rem;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.dl{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.dl-btn{background:var(--lime);color:#16255A;font-weight:700;font-size:1.0625rem;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none}
+.dl-btn:hover{filter:brightness(1.06)}
+.dl-sub{font-size:.9375rem;color:var(--mut)}
+.dl-note{flex-basis:100%;font-size:.875rem;max-width:42em;color:var(--mut)}
+.band{background:var(--soft);color:var(--ink)}
+.band h3{color:var(--head)}
+.band a{color:var(--link)}
+.band a:focus-visible{outline-color:var(--focus)}
+@media (max-width:60rem){.hero{grid-template-columns:1fr;gap:2rem}.hero-shot{margin-top:0}}
+.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;
+background:#16255A;color:#ffffff;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(22,37,90,.28);
+opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:#22357a}
+.to-top:focus-visible{outline:3px solid #89D129;outline-offset:3px}
+.to-top svg{width:1.25rem;height:1.25rem}
+@media (prefers-reduced-motion:reduce){.to-top{transition:none}}
+
+body>header.top{padding-left:1.5rem;padding-right:1.5rem}
+.u-main{max-width:46rem;padding-top:3rem;padding-bottom:5rem}
+.u-main h1{font-size:clamp(1.75rem,1.2rem + 1.6vw,2.375rem);font-weight:800;letter-spacing:-.02em}
+.u-lead{margin-top:.9rem;color:var(--mut);font-size:1.0625rem}
+.u-next{margin-top:2rem;background:var(--lime-soft);border:1px solid var(--lime-edge);border-radius:1rem;padding:1.25rem 1.4rem}
+.u-next h2{font-size:1.25rem}
+.u-next .u-note{margin-top:.35rem;color:var(--mut);font-size:.9375rem}
+.u-next ul{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.7rem}
+.u-next li{display:flex;gap:.75rem;align-items:baseline}
+.stage{flex:none;min-width:4.6rem;text-align:center;font-size:.8125rem;font-weight:700;border-radius:999px;padding:.1rem .65rem;border:1px solid var(--lime-edge);background:#ffffff;color:var(--head)}
+.stage-soon{background:var(--navy);border-color:var(--navy);color:#ffffff}
+.stage-reviewing{color:var(--mut);border-color:#cfd6e4}
+.u-rel{margin-top:2.5rem;padding-top:1.75rem;border-top:1px solid var(--line)}
+.u-rel h2{font-size:1.375rem}
+.u-rel .u-ver{margin-right:.45rem}
+.u-new{display:inline-block;margin-left:.5rem;font-size:.75rem;font-weight:700;background:var(--lime);color:var(--navy);border-radius:999px;padding:.05rem .6rem;vertical-align:middle}
+.u-date{display:block;margin-top:.25rem;color:var(--mut);font-size:.9375rem}
+.u-rel ul{margin:.8rem 0 0;padding-left:1.25rem}
+.u-rel li{margin:.3rem 0}
+.u-en{margin-top:4.5rem;padding-top:2rem;border-top:2px solid var(--line)}
+.u-home{position:fixed;top:1rem;left:1rem;z-index:20;display:inline-flex;align-items:center;gap:.35rem;background:var(--lime-soft);color:var(--navy);font-size:15px;font-weight:700;text-decoration:none;border:1px solid var(--lime-edge);border-radius:999px;padding:.45rem 1rem;box-shadow:0 6px 18px rgba(22,37,90,.18);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+.u-home.show{opacity:1;visibility:visible}
+.u-home:hover{background:#e6f3d2}
+.u-home:focus-visible{opacity:1;visibility:visible;outline:3px solid var(--focus);outline-offset:3px}
+.u-bottom{margin-top:3rem;text-align:center}
+.u-bottom a{display:inline-block;font-weight:600;text-decoration:none;border:1px solid #cfd6e4;border-radius:999px;padding:.5rem 1.2rem}
+.u-bottom a:hover{border-color:var(--navy)}
+.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:0;
+background:#16255A;color:#ffffff;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px rgba(22,37,90,.28);
+opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:#22357a}
+.to-top:focus-visible{outline:3px solid #89D129;outline-offset:3px}
+.to-top svg{width:1.25rem;height:1.25rem}
+@media (prefers-reduced-motion:reduce){.to-top,.u-home{transition:none}}
+</style>
+</head>
+<body><a class="skip" href="#main">본문으로 건너뛰기</a><a class="u-home" id="u-home" href="/">← 처음으로</a><header class="wrap top"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
+<path d="M 8 -76 L 8 0 L 52 0"/>
+<g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
+<g transform="translate(180 0)"><path d="M 8 -76 L 38 0 L 68 -76"/></g>
+<g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
+<g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
+<g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
+</g></svg></a><nav aria-label="바로가기"><a href="/harudo/">harudo 소개</a><a href="#en" lang="en">English</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의</a></nav></header><main class="wrap u-main" id="main">
+<section id="ko" lang="ko" aria-labelledby="ko-h">
+<h1 id="ko-h">업데이트 소식</h1>
+<p class="u-lead">판마다 무엇이 바뀌었는지, 그리고 다음에 무엇을 준비하고 있는지 알려 드립니다.</p>
+<div class="u-next" aria-labelledby="ko-next"><h2 id="ko-next">다음 예정</h2>
+<p class="u-note">날짜는 약속하지 않고 진행 단계만 적습니다.</p><ul>
+<li><span class="stage stage-preparing">준비 중</span><span>처음 시작 안내에 나오는 예시 그림을 누르면 크게 볼 수 있게 합니다.</span></li>
+<li><span class="stage stage-preparing">준비 중</span><span>처음 설정을 마치면 하루도로 할 수 있는 일을 한눈에 보여 드립니다.</span></li>
+<li><span class="stage stage-reviewing">검토 중</span><span>설치할 때 뜨는 Windows 경고 창을 줄이는 방법을 알아보고 있습니다.</span></li>
+</ul></div>
+<article class="u-rel" aria-labelledby="ko-v0-2-39">
+<h2 id="ko-v0-2-39"><span class="u-ver">0.2.39</span>Claude에게 메일 정리를 맡기고, 업데이트 소식도 앱에서 봐요<span class="u-new">최신</span></h2>
+<time class="u-date" datetime="2026-10-05">2026년 10월 5일</time><ul>
+<li>업데이트한 뒤 처음 켜면 «0.2.39에서 바뀐 것 보기» 띠가 한 번 뜹니다. 누르면 이번에 바뀐 것과 다음에 준비 중인 일을 한 창에서 볼 수 있어요.</li>
+<li>띠는 닫기(×)를 누르면 이 판에서는 다시 뜨지 않습니다.</li>
+<li>닫은 뒤에도 맨 위 로고를 눌러 여는 «harudo 정보» 창이나 도움말에서 «새 소식 보기»를 누르면 언제든 다시 볼 수 있어요.</li>
+<li>Claude에게 하루도 메일 정리를 맡길 수 있습니다. Claude는 그때그때 묻지 않고 메일을 휴지통이나 분류함으로 옮기고 규칙을 만들며, 별표·내가 아는 사람·청구·결제 메일은 건드리지 않아요. 이미 Claude를 연결해 두셨다면 켜진 채로 시작하니, 원하지 않으면 설정 › AI 비서 연결에서 «메일 정리»를 꺼 주세요.</li>
+<li>Claude가 정리하면 메일 화면 위쪽 띠에 알려 드리고, «되돌리기»로 한 번에 되돌릴 수 있어요. 영구 삭제는 하지 않으며 휴지통의 메일은 60일 안에 되살릴 수 있습니다(웹메일 반영을 켠 계정은 웹메일 휴지통으로도 옮겨져요). Claude가 건너뛴 메일은 띠의 «건너뛴 n통 보기»에서 골라 «선택한 메일 휴지통으로»로 직접 치울 수 있어요.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="ko-v0-2-38">
+<h2 id="ko-v0-2-38"><span class="u-ver">0.2.38</span>하루도에서 정리한 메일을 웹메일에도 반영할 수 있어요</h2>
+<time class="u-date" datetime="2026-10-05">2026년 10월 5일</time><ul>
+<li>메일 화면의 «메일함·규칙 관리» › «계정마다»에 «harudo에서 정리한 것을 웹메일에도 반영» 스위치가 생겼습니다. 켜면 하루도에서 메일을 옮기거나 휴지통으로 보내고, 스팸 해제하거나 되살린 것이 웹메일에도 똑같이 반영됩니다. 하루도가 자동으로 나눈 기본 분류는 웹메일에 반영하지 않아요.</li>
+<li>이미 연결해 둔 메일 계정은 저절로 켜지지 않습니다. 그 자리에 «아직 정하지 않았어요»가 보이면 «켜기»나 «지금은 안 함»을 골라 주세요. 지금까지 정리한 메일은 웹메일에서 그대로이고, 켠 뒤에 하는 정리부터 반영됩니다. 새로 연결하는 메일 계정은 켜진 채로 시작하며, 언제든 같은 자리에서 끌 수 있어요.</li>
+<li>웹메일에 반영할 때 메일은 지워지지 않고 웹메일 휴지통으로 옮겨집니다. 하루도에서 되살리면 웹메일에서도 원래 자리로 돌아오고, 분류함으로 옮긴 메일을 위해 웹메일에 같은 이름의 편지함이 생길 수 있어요. POP3로 연결한 계정은 웹메일에 반영할 수 없습니다.</li>
+<li>전에 «앱에서 메일을 치울 때 웹메일 휴지통으로도 옮기기»를 켜 두셨다면, 이제부터 하루도에서 휴지통으로 보낸 메일이 실제로 웹메일 휴지통으로도 옮겨집니다.</li>
+<li>업데이트로 하루도 자료의 구조가 바뀔 때는, 바꾸기 직전에 자료 사본을 하루도 데이터 폴더 안 backups\before-update에 자동으로 만들어 둡니다. 사본은 최근 두 벌만 남깁니다.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="ko-v0-2-37">
+<h2 id="ko-v0-2-37"><span class="u-ver">0.2.37</span>구글 캘린더를 연결할 수 있어요</h2>
+<time class="u-date" datetime="2026-10-05">2026년 10월 5일</time><ul>
+<li>지난 판에서 «곧 열린다»고 알려 드린 구글 캘린더 연결이 열렸습니다. 설정에서 구글 캘린더 «연결하기»를 누르면 구글 로그인 화면으로 이어집니다.</li>
+<li>처음 설치하시는 분은 하루도가 harudo라는 이름의 폴더에 설치됩니다.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="ko-v0-2-36">
+<h2 id="ko-v0-2-36"><span class="u-ver">0.2.36</span>설치가 한 번 누르면 끝나요</h2>
+<time class="u-date" datetime="2026-10-04">2026년 10월 4일</time><ul>
+<li>설치 파일을 한 번 누르면 묻는 것 없이 설치가 끝나고 하루도가 바로 켜집니다.</li>
+<li>구글 캘린더 연결을 누르면 어려운 설정 문구 대신, 아직 열리지 않았으니 곧 업데이트로 열린다고 알기 쉽게 알려 드립니다.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="ko-v0-2-35">
+<h2 id="ko-v0-2-35"><span class="u-ver">0.2.35</span>메일 화면 안내와 Claude 연결이 편해졌어요</h2>
+<time class="u-date" datetime="2026-10-04">2026년 10월 4일</time><ul>
+<li>메일 화면 위쪽을 가리던 «AI 키가 필요해요» 상자 대신 작은 안내 창이 뜹니다. 저절로 뜨는 안내는 «다시 보지 않기»로 끌 수 있고, 설정 › AI API 키에서 다시 켤 수 있어요.</li>
+<li>설정 화면 왼쪽의 묶음 제목을 굵고 진하게 바꿔 찾기 쉬워졌습니다.</li>
+<li>Claude 앱에서 하루도 연결을 지웠다면 설정 › AI 비서 연결에서 «다시 연결»로 되살릴 수 있습니다.</li>
+<li>하루도가 꺼져 있을 때 Claude에 노란 경고가 뜨지 않습니다. 이미 연결해 두셨다면 설정 › AI 비서 연결에 «다시 설치»가 보일 때 한 번 눌러 주세요.</li>
+<li>Claude가 하루도를 통해 메일을 읽을 때, 평범한 회사 안내 메일의 본문이 앞부분만 전달되던 경우를 줄였습니다.</li>
+</ul></article>
+<p class="u-bottom"><a href="/">← 처음으로 가기</a></p>
+</section>
+<section id="en" lang="en" aria-labelledby="en-h" class="u-en">
+<h1 id="en-h">Release notes</h1>
+<p class="u-lead">What changed in each version of harudo, and what we're working on next.</p>
+<div class="u-next" aria-labelledby="en-next"><h2 id="en-next">Coming up</h2>
+<p class="u-note">We list the stage each item is at, not a date.</p><ul>
+<li><span class="stage stage-preparing">Preparing</span><span>You&#x27;ll be able to click the example pictures in the getting-started guide to see them larger.</span></li>
+<li><span class="stage stage-preparing">Preparing</span><span>When you finish setting up, harudo will show you what it can do at a glance.</span></li>
+<li><span class="stage stage-reviewing">Under review</span><span>We&#x27;re looking into ways to reduce the Windows warning that appears when you install harudo.</span></li>
+</ul></div>
+<article class="u-rel" aria-labelledby="en-v0-2-39">
+<h2 id="en-v0-2-39"><span class="u-ver">0.2.39</span>Let Claude tidy your mail, and read update news inside harudo<span class="u-new">Latest</span></h2>
+<time class="u-date" datetime="2026-10-05">October 5, 2026</time><ul>
+<li>The first time you open harudo after an update, a bar saying &quot;See what changed in 0.2.39&quot; appears once. Click it to see what changed this time and what we&#x27;re preparing next, all in one window.</li>
+<li>If you click Close (×) on the bar, it won&#x27;t appear again for this version.</li>
+<li>You can open it again any time with &quot;See what&#x27;s new&quot; in the About harudo window (click the logo at the top) or in Help.</li>
+<li>You can now let Claude tidy your harudo mail. Without asking each time, Claude can move mail to Trash or into categories and create rules - it leaves starred mail, people you know and bills/payments mail alone. If you already connected Claude, this starts turned on; if you don&#x27;t want it, turn off &quot;Organize mail&quot; in Settings › AI assistant link.</li>
+<li>When Claude tidies your mail, a bar at the top of the mail screen tells you, and Undo reverses it in one go. Nothing is deleted permanently, and mail in Trash can be restored within 60 days (for accounts with webmail sync on, it also goes to your webmail&#x27;s trash). Mail Claude skipped can be reviewed with &quot;See n skipped&quot; on the bar, where you can tick the ones to clear and press &quot;Move n selected to Trash&quot; yourself.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="en-v0-2-38">
+<h2 id="en-v0-2-38"><span class="u-ver">0.2.38</span>Mail you tidy in harudo can now be applied to webmail too</h2>
+<time class="u-date" datetime="2026-10-05">October 5, 2026</time><ul>
+<li>A new switch, &quot;Apply your changes in harudo to webmail too&quot;, is in Mailboxes &amp; rules › Per account on the mail screen. When it&#x27;s on, mail you move, send to trash, mark as not spam or restore in harudo is changed the same way in your webmail. harudo&#x27;s automatic built-in sorting is not applied to webmail.</li>
+<li>Mail accounts you already connected are not turned on automatically. If you see &quot;Not decided yet&quot; there, choose Turn on or Not now. Mail you already tidied stays as it is in webmail; only what you tidy after turning it on is applied. Newly connected mail accounts start with it on, and you can turn it off in the same place at any time.</li>
+<li>When changes are applied to webmail, mail isn&#x27;t deleted — it&#x27;s moved to your webmail&#x27;s trash. If you restore it in harudo, it goes back to where it was in webmail too, and moving mail into a category may create a folder with the same name in your webmail. Accounts connected with POP3 can&#x27;t be applied to webmail.</li>
+<li>If you had turned on &quot;Also move mail to webmail&#x27;s trash when I remove it in the app&quot;, mail you send to trash in harudo is now actually moved to your webmail&#x27;s trash as well.</li>
+<li>When an update changes how harudo stores your data, harudo now makes a copy of your data right before the change, in backups\before-update inside the harudo data folder. Only the two most recent copies are kept.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="en-v0-2-37">
+<h2 id="en-v0-2-37"><span class="u-ver">0.2.37</span>You can now connect Google Calendar</h2>
+<time class="u-date" datetime="2026-10-05">October 5, 2026</time><ul>
+<li>Google Calendar connection, which we said was coming soon in the last version, is now open. Click Connect for Google Calendar in Settings to go to the Google sign-in page.</li>
+<li>On a fresh install, harudo now goes into a folder named harudo.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="en-v0-2-36">
+<h2 id="en-v0-2-36"><span class="u-ver">0.2.36</span>Installing now takes a single click</h2>
+<time class="u-date" datetime="2026-10-04">October 4, 2026</time><ul>
+<li>Open the installer once — it finishes without asking anything and starts harudo right away.</li>
+<li>If you try to connect Google Calendar, harudo now tells you in plain words that it isn&#x27;t open yet and will arrive in an update, instead of showing technical setup text.</li>
+</ul></article>
+<article class="u-rel" aria-labelledby="en-v0-2-35">
+<h2 id="en-v0-2-35"><span class="u-ver">0.2.35</span>Smoother mail-screen notices and Claude connection</h2>
+<time class="u-date" datetime="2026-10-04">October 4, 2026</time><ul>
+<li>Instead of the &quot;AI key needed&quot; box covering the top of the mail screen, a small notice now pops up. You can turn off the automatic notice with &quot;Don&#x27;t show again&quot; and turn it back on in Settings › AI API key.</li>
+<li>Group headings on the left side of Settings are now bold and darker, so they&#x27;re easier to find.</li>
+<li>If you removed the harudo connection in the Claude app, you can bring it back with Reconnect in Settings › AI assistant link.</li>
+<li>Claude no longer shows a yellow warning when harudo is closed. If you connected before this update, click Reinstall in Settings › AI assistant link when you see it.</li>
+<li>When Claude reads your mail through harudo, ordinary emails from companies are less often cut down to just their first part.</li>
+</ul></article>
+<p class="u-bottom"><a href="/">← Back to home</a></p>
+</section>
+</main><footer class="foot"><div class="wrap foot-in"><a class="home" href="/" aria-label="LAVION 첫 화면"><svg class="lavion" viewBox="-14 -90 510 104" role="img" aria-label="LAVION">
+<g fill="none" stroke="var(--wm)" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
+<path d="M 8 -76 L 8 0 L 52 0"/>
+<g transform="translate(82 0)"><path d="M 8 0 L 38 -76 L 68 0"/><path d="M 20 -30 L 56 -30"/></g>
+<g transform="translate(180 0)"><path d="M 8 -76 L 38 0 L 68 -76"/></g>
+<g transform="translate(278 0)"><path d="M 8 -76 L 8 0"/></g>
+<g transform="translate(316 0)"><circle cx="38" cy="-38" r="30"/></g>
+<g transform="translate(414 0)"><path d="M 8 0 L 8 -76 L 60 0 L 60 -76"/></g>
+</g></svg></a><p><a href="/privacy/">개인정보처리방침</a> <span lang="en">(<a href="/privacy/">Privacy Policy</a>)</span></p><p><a href="/contact/">문의 남기기</a> <span lang="en">(<a href="/contact/">Contact</a>)</span> · support@lavionlabs.com</p><p class="mut">© 라비온(Lavion) · lavionlabs.com</p></div></footer><button type="button" class="to-top" id="to-top" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button><script>(function(){var b=document.getElementById("to-top"),h=document.getElementById("u-home");var f=function(){var y=window.scrollY;if(b)b.classList.toggle("show",y>400);if(h)h.classList.toggle("show",y>160)};window.addEventListener("scroll",f,{passive:true});f();if(b)b.addEventListener("click",function(){var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:r?"auto":"smooth"})})})();</script></body></html>
