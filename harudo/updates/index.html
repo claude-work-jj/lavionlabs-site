@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>업데이트 소식 | harudo by LAVION</title>
-<meta name="description" content="harudo가 판마다 무엇이 바뀌었는지, 다음에 무엇을 준비하고 있는지 알려 드립니다. 최신 0.2.49 (2026년 10월 16일).">
+<meta name="description" content="harudo가 판마다 무엇이 바뀌었는지, 다음에 무엇을 준비하고 있는지 알려 드립니다. 최신 0.2.50 (2026년 10월 23일).">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://lavionlabs.com/harudo/updates/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -203,8 +203,13 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <li><span class="stage stage-preparing">준비 중</span><span>처음 설정을 마치면 하루도로 할 수 있는 일을 한눈에 보여 드립니다.</span></li>
 <li><span class="stage stage-reviewing">검토 중</span><span>설치할 때 뜨는 Windows 경고 창을 줄이는 방법을 알아보고 있습니다.</span></li>
 </ul></div>
+<article class="u-rel" aria-labelledby="ko-v0-2-50">
+<h2 id="ko-v0-2-50"><span class="u-ver">0.2.50</span>제미나이 키의 잠깐 한도 초과를 결제 문제로 잘못 알리던 것을 고쳤어요<span class="u-new">최신</span></h2>
+<time class="u-date" datetime="2026-10-23">2026년 10월 23일</time><ul>
+<li>구글 제미나이 키로 메일을 많이 정리할 때, 잠깐 걸리는 사용 한도(분당·하루 한도)를 «잔액이나 사용 한도를 확인하세요»라는 결제 문제로 잘못 알리고 바로 멈추던 것을 고쳤어요. 이제는 잠시 기다렸다가 다시 시도하고, 정말 결제 설정이 필요한 경우에만 그 안내를 띄워요.</li>
+</ul></article>
 <article class="u-rel" aria-labelledby="ko-v0-2-49">
-<h2 id="ko-v0-2-49"><span class="u-ver">0.2.49</span>내 계좌 사이로 옮긴 돈은 이제 수입·지출에서 빼요<span class="u-new">최신</span></h2>
+<h2 id="ko-v0-2-49"><span class="u-ver">0.2.49</span>내 계좌 사이로 옮긴 돈은 이제 수입·지출에서 빼요</h2>
 <time class="u-date" datetime="2026-10-16">2026년 10월 16일</time><ul>
 <li>월 흐름과 홈 «한 달 결산»에서 내 계좌 사이로 옮긴 돈(내 이름으로 보내고 받은 돈, 은행 안 보관함 — 예를 들어 세이프박스)을 이제 수입·지출에서 빼요. 그래서 업데이트 뒤에는 지난달까지의 수입·지출 합계가 전보다 크게 줄어 보일 수 있어요. 뺀 줄은 목록에 그대로 있고, «뺀 줄 보기»에서 [지출이에요]·[소득이에요]를 눌러 바로잡을 수 있어요. 이체·적금처럼 남은 돈 계산에서 뺀 줄은 절약 제안에도 올라오지 않아요.</li>
 <li>이 달에 잡힌 소득이 없거나 나간 돈에 비해 아주 적으면(급여가 들어오는 계좌의 내역을 아직 가져오지 않은 경우 등) 이제 «들어온 돈보다 더 썼어요»라고 하지 않아요. 남은 돈은 계산하지 않고 나간 돈만 보여 드리고, 월 흐름·계획 안내·홈 «한 달 결산»에서 [거래 가져오기]로 가는 길을 알려 드려요. 잡힌 소득이 정말 그 달의 전부라면 월 흐름 «남은 돈»에서 [이 달엔 다른 소득이 없어요]를 눌러 주세요(자료가 아직 덜 모인 달은 [다 모였다고 표시]). 그 달은 남은 돈을 다시 계산해요 — 소득이 0원인 달은 빼고요.</li>
@@ -333,8 +338,13 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <li><span class="stage stage-preparing">Preparing</span><span>When you finish setting up, harudo will show you what it can do at a glance.</span></li>
 <li><span class="stage stage-reviewing">Under review</span><span>We&#x27;re looking into ways to reduce the Windows warning that appears when you install harudo.</span></li>
 </ul></div>
+<article class="u-rel" aria-labelledby="en-v0-2-50">
+<h2 id="en-v0-2-50"><span class="u-ver">0.2.50</span>A brief Gemini rate limit is no longer reported as a billing problem<span class="u-new">Latest</span></h2>
+<time class="u-date" datetime="2026-10-23">October 23, 2026</time><ul>
+<li>When you sort a lot of mail with a Google Gemini key, a short usage limit (per minute or per day) was wrongly reported as a billing problem (“check your balance or usage limit”) and harudo stopped right away. It now waits a moment and tries again, and shows that notice only when billing really needs setting up.</li>
+</ul></article>
 <article class="u-rel" aria-labelledby="en-v0-2-49">
-<h2 id="en-v0-2-49"><span class="u-ver">0.2.49</span>Money you move between your own accounts no longer counts as income or spending<span class="u-new">Latest</span></h2>
+<h2 id="en-v0-2-49"><span class="u-ver">0.2.49</span>Money you move between your own accounts no longer counts as income or spending</h2>
 <time class="u-date" datetime="2026-10-16">October 16, 2026</time><ul>
 <li>Money you move between your own accounts — transfers to and from your own name, and in-bank vaults such as Safebox — is now left out of income and spending in Monthly flow and the Home “Monthly recap”. After this update, totals for past months may look noticeably lower than before. The entries stay in the list; if one was real spending or income, press “It&#x27;s spending” or “It&#x27;s income” under “Show left-out entries”. Entries left out of “Money left” this way, such as transfers and savings, also stay out of saving suggestions.</li>
 <li>When no income is recorded for a month, or very little compared with spending (for example, you haven&#x27;t imported the account your pay goes into), harudo no longer says you spent more than came in. It skips “Money left”, shows only what went out, and points you to “Import transactions” — in Monthly flow, the plan for next month and the Home “Monthly recap”. If the recorded income really is all you had that month, press “No other income this month” under “Money left” in Monthly flow (in a month whose records aren&#x27;t all in yet, it&#x27;s “Mark as all in”). harudo then works out what&#x27;s left for that month again — except in months with no income at all.</li>
