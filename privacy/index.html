@@ -39,7 +39,7 @@ opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,tra
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect x='48' y='48' width='928' height='928' rx='208' fill='%2389D129'/%3E%3Cg fill='none' stroke='%2316255A' stroke-width='100' stroke-linecap='round'%3E%3Cpath d='M242 163V861'/%3E%3Cpath d='M242 648A270 190 0 0 1 782 648V861'/%3E%3C/g%3E%3Cpath d='M358 245L430 317L600 147' fill='none' stroke='white' stroke-width='92' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
 <body>
-<nav class="pv-top" aria-label="바로가기"><a class="pv-home" href="/">← 처음으로</a><a href="/harudo/">harudo 소개</a><a href="/contact/">문의 남기기</a></nav>
+<nav class="pv-top" aria-label="바로가기"><a class="pv-home" href="/">← 처음으로</a><a href="/harudo/">harudo 소개</a><a href="/contact/">문의 남기기</a><a href="#en" lang="en">English summary</a></nav>
 <h1>개인정보처리방침 — harudo</h1>
 <p class="updated">최종 업데이트(시행일): 2026년 11월 16일 | 적용 대상: harudo (Windows 데스크톱 앱) | 제공: 라비온(LAVION)</p>
 
@@ -443,6 +443,43 @@ LAVION이 이전하는 것은 아니지만, 알고 쓰실 수 있도록 적습�
 <li><a href="/privacy/2026-10-03/">2026년 10월 3일판</a></li>
 <li><a href="/privacy/2026-09-29/">2026년 9월 29일판</a></li>
 </ul>
+
+<section id="en" lang="en">
+<h2>English summary</h2>
+<p>This is a summary of the harudo Privacy Policy for English readers. The Korean policy above is the official version; if the two differ, the Korean policy applies. Effective date: November 16, 2026. Applies to: harudo (Windows desktop app). Provider: LAVION (라비온).</p>
+
+<h3>At a glance</h3>
+<div class="tbl"><table>
+<tr><th>Company servers</th><td>We do not run any. Your mail, calendar, tasks and other data are processed <b>only on the computer where harudo is installed</b> (Section 1 of the Korean policy).</td></tr>
+<tr><th>Personal data LAVION receives</th><td>Only what you choose to send us: error and usage reports and problem reports you send by pressing "Send," your inquiries (email or KakaoTalk open chat), and the email address you register for notices. We see the sender's email address (or open-chat nickname). The operator may use the AI service Anthropic Claude (USA) to organize received reports and inquiries; the notice mailing list is not processed with AI (Sections 2, 2-3, 6, 6-C and 11 of the Korean policy).</td></tr>
+<tr><th>When data leaves your PC</th><td>Only to services you connect and features you turn on: your mail server, the AI provider you choose, the AI app you connect through "AI assistant connection," Google Calendar, the folder you pick for "Continue on another PC," web pages you import, and statement sites you open from statement emails. Remote images in HTML mail are not loaded unless you choose to show them. Nothing passes through LAVION servers (Sections 2-1, 2-2, 3, 4, 4-2 to 4-4 and 12 of the Korean policy).</td></tr>
+<tr><th>Third parties, ads, sale</th><td>We do not provide or sell your data to third parties. There are no ads in the app. Promotional news emails go only to people who separately agreed (Sections 2-3, 5 and 8 of the Korean policy).</td></tr>
+<tr><th>Google user data</th><td>We follow Google's Limited Use requirements (Section 4-1 of the Korean policy).</td></tr>
+<tr><th>Contact and privacy officer</th><td><a href="mailto:support@lavionlabs.com">support@lavionlabs.com</a> · KakaoTalk open chat "하루도 서비스" (Section 15 of the Korean policy)</td></tr>
+</table></div>
+
+<h3>Google Calendar integration</h3>
+<p>Google Calendar integration is optional and is turned on only if you want it. Before you turn it on, the app explains what it reads and writes, and you grant permission yourself on Google's consent screen. You can disconnect it in the app at any time. The integration runs directly between your device and the Google API and does not pass through LAVION servers.</p>
+
+<h3>How harudo handles Google user data</h3>
+<ul>
+<li><b>Permission requested</b> — harudo requests only one permission: to see, create, change and delete events on Google calendars you own (Google scope <code>calendar.events.owned</code>). It does not request permission for Gmail or any other Google service. The app uses only your primary calendar.</li>
+<li><b>What harudo reads</b> — When you press "Import," it reads events for the month shown in the app calendar plus the month before and after. While the app is running, it periodically reads events for the current month plus the month before and after. The app uses and stores only each event's title, description, date and time (start, end, all-day), whether it repeats, and its Google event color. To filter out events from Google's public holiday calendar, it checks the event organizer's address but does not store it. When reading the event list, harudo asks Google only for these fields (plus the values that identify an event and its status), so it does not receive other fields such as attendees, location or attachments. It does not use or store attendees, location or attachments.</li>
+<li><b>Why harudo uses it</b> — To show the events you keep in Google in the harudo calendar, to add events you choose as tasks, and to put the dates of tasks you create in harudo onto Google Calendar as events. It is not used for any other purpose.</li>
+<li><b>What harudo writes</b> — When you create or edit a task with a date in harudo, it creates or updates a Google Calendar event with that task's title, description, and date and time (with a reminder 30 minutes before, if a time is set). When you edit or delete an event that came from Google, the change is also made in Google Calendar. Deleting in Google cannot be undone, so the app asks you first.</li>
+<li><b>Where it is kept</b> — Events read from Google are stored as a copy in the local database on your computer. Google access credentials are encrypted and stored on your device (Section 2 of the Korean policy). Nothing is sent to LAVION servers.</li>
+<li><b>When it leaves your device</b> — Only in these two cases: (1) If you use an AI feature yourself (for example, writing a postponement message) on a task you imported from Google, the needed content, such as the task title, is sent to the AI provider you chose (Section 2-1 of the Korean policy). (2) If you turn on "Continue on another PC," imported events and the encrypted Google access credentials are included in the app data copy (Section 4-2 of the Korean policy). Other than this, we do not provide or sell Google user data to third parties.</li>
+<li><b>What harudo does not do</b> — It does not use Google user data for advertising (including personalized ads or retargeting), does not transfer it to data brokers or information resellers, and does not use it for credit or lending decisions. LAVION does not use Google user data to develop, improve or train AI or machine learning models. LAVION staff do not read Google user data, except when you directly agree to let us see specific content, or when needed for security investigations or to comply with the law. Error and usage reports and problem reports (Section 6 of the Korean policy) do not include Google event content.</li>
+<li><b>How long it is kept and how to delete it</b> — Imported event copies stay on your computer until you delete them or delete the app data. When you disconnect in the app, the Google access credentials are deleted immediately. The app then asks whether to also delete the imported Google event copies from this PC (items added as tasks stay as tasks), and it also revokes harudo's access on Google's side. Copies you chose to keep remain until you delete them or delete the app data. To check separately, or to remove access yourself on Google's side, remove harudo on the "Third-party apps &amp; services" page of your Google Account (myaccount.google.com/connections).</li>
+</ul>
+<p>The AI assistant connection (Section 2-2 of the Korean policy) does not handle Google user data, including events imported from Google Calendar.</p>
+<p>harudo's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h3>Contact</h3>
+<p>Email: <a href="mailto:support@lavionlabs.com">support@lavionlabs.com</a><br>
+Privacy officer: Jimin Kim<br>
+Business: Lavion, business registration no. 674-42-01440</p>
+</section>
 
 <footer>LAVION · lavionlabs.com</footer>
 
